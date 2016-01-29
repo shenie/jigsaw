@@ -1,0 +1,39 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="http://localhost:8080/css/main.css"/>
+  <link rel="stylesheet" href="http://localhost:9090/css/app1.css"/>
+
+  <script src="http://localhost:8080/js/underscore.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://localhost:8080/js/angular.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://localhost:8080/js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="http://localhost:8080/js/main.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="http://localhost:9090/js/app1.js" type="text/javascript" charset="utf-8"></script>
+  <title>Jigsaw</title>
+
+</head>
+
+<body>
+  
+  <p>This page is served up in main app and below the ruler is the angular app</p>
+
+  <hr/>
+  
+  <div ng-app="cm.jigsaw">
+    
+    <a href="#/welcome">welcome</a> | <a href="#/home">home</a>
+
+    <!-- whether we use ng-view or not in jigsaw is undetermined -->
+    <div ng-view></div>
+
+    <div ng-include="'http://localhost:9090/templates/app1-page.html.tpl'"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+<p>This is welcome.html.tpl</p>
